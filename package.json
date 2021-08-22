@@ -1,0 +1,22 @@
+{
+  "name": "@tboerc/react-native-responsive",
+  "version": "1.0.0",
+  "author": "tboerc",
+  "license": "MIT",
+  "repository": "https://github.com/tboerc/react-native-responsive",
+  "description": "Toolkit to help make you React Native app responsive",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@types/jest": "^27.0.1",
+    "@types/react": "^17.0.19",
+    "@types/react-native": "^0.64.13",
+    "@types/react-test-renderer": "^17.0.1",
+    "eslint": "^7.32.0",
+    "typescript": "^4.3.5"
+  },
+  "files": [
+    "dist"
+  ]
+}
