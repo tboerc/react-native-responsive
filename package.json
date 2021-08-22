@@ -4,7 +4,7 @@
   "author": "tboerc",
   "license": "MIT",
   "repository": "https://github.com/tboerc/react-native-responsive",
-  "description": "Toolkit to help make you React Native app responsive",
+  "description": "A small library that provides a Hook to make your UI fully responsive",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "devDependencies": {
