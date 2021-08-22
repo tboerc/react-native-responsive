@@ -1,23 +1,27 @@
 import React from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 
-import {useResponsive} from '../../../dist';
+import {StyleSheet, useResponsive} from '../../../dist';
+
+const s = StyleSheet.create(({rw}) => ({
+  box: {
+    width: rw(100),
+    height: rw(100),
+    backgroundColor: 'orange',
+  },
+}));
 
 const Foo = () => {
-  const {width, height, media, orientation, rf, rw} = useResponsive();
+  const {width, height, media, orientation, styles} = useResponsive(s);
 
   return (
     <SafeAreaView>
-      <Text>{width}</Text>
-      <Text>{height}</Text>
-      <Text>{orientation}</Text>
-      <Text>{media.current}</Text>
+      <Text>Width: {width}</Text>
+      <Text>Height: {height}</Text>
+      <Text>Orientation: {orientation}</Text>
+      <Text>Current breakpoint: {media.current}</Text>
 
-      <Text style={{fontSize: 18}}>Font Test Responsive</Text>
-      <Text style={{fontSize: rf(18)}}>Font Test Responsive</Text>
-
-      <View style={{width: rw(100), height: rw(100), backgroundColor: 'red'}} />
-      <View style={{width: 100, height: 100, backgroundColor: 'blue'}} />
+      <View style={styles.box} />
     </SafeAreaView>
   );
 };
