@@ -8,4 +8,4 @@ export const absoluteFill = StyleSheet.absoluteFill;
 export const hairlineWidth = StyleSheet.hairlineWidth;
 export const absoluteFillObject = StyleSheet.absoluteFillObject;
 
-export const create = <T extends Styles<T> | Styles<any>>(styles: StylesFunction<T | Styles<T>>) => styles;
+export const create = <T extends Styles<T> | Styles<any>>(styles: StylesFunction<T>) => styles;

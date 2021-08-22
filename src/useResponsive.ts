@@ -1,10 +1,10 @@
 import {useCallback, useContext, useMemo} from 'react';
-import {PixelRatio} from 'react-native';
+import {PixelRatio, StyleSheet} from 'react-native';
 
 import Context, {ContextType} from './context';
 import {ResponsiveFont, ResponsiveHeight, ResponsiveWidth, Styles, StylesFunction} from './types';
 
-const useResponsive = <T extends Styles<T> | Styles<any>>(styles?: StylesFunction<T | Styles<T>>) => {
+const useResponsive = <T extends Styles<T> | Styles<any>>(styles?: StylesFunction<T>) => {
   const {scale, ...context} = useContext(Context) as ContextType;
 
   const rw: ResponsiveWidth = useCallback(
@@ -30,7 +30,7 @@ const useResponsive = <T extends Styles<T> | Styles<any>>(styles?: StylesFunctio
 
   const s = useMemo(() => {
     if (typeof styles === 'function') {
-      return styles({rw, rh, rf});
+      return StyleSheet.create(styles({rw, rh, rf}));
     }
   }, [rf, rh, rw, styles]);
 
