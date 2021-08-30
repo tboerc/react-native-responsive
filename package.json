@@ -1,21 +1,34 @@
 {
   "name": "@tboerc/react-native-responsive",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "tboerc",
   "license": "MIT",
   "repository": "https://github.com/tboerc/react-native-responsive",
   "description": "A small library that provides a Hook to make your UI fully responsive",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "yarn build",
+    "build": "concurrently \"rimraf dist\" \"bili\""
+  },
   "devDependencies": {
     "@react-native-community/eslint-config": "^3.0.0",
-    "@types/jest": "^27.0.1",
     "@types/react": "^17.0.19",
     "@types/react-native": "^0.64.13",
-    "@types/react-test-renderer": "^17.0.1",
+    "bili": "^5.0.5",
+    "concurrently": "^6.2.1",
     "eslint": "^7.32.0",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.3.5"
   },
+  "keywords": [
+    "react-native",
+    "responsive",
+    "scale",
+    "context",
+    "hooks"
+  ],
   "files": [
     "dist"
   ]
