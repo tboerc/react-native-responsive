@@ -3,4 +3,4 @@
 *.bat text eol=crlf
 
 # Prevent analysis of example folder languages
-example/* linguist-vendored
+example/* linguist-vendored=true
